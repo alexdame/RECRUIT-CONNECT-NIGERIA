@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. William’s Specialist Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #2E86C1, #1A5276);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #1A5276;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+        nav a:hover {
+            background: #2E86C1;
+            border-radius: 5px;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x700/?hospital,healthcare') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2E86C1;
+            border-bottom: 3px solid #2E86C1;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service-box {
+            background: #2E86C1;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        .service-box:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2E86C1;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>St. William’s Specialist Hospital</header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#vision">Vision & Mission</a>
+        <a href="#tour">Hospital Tour</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="hero">Your Health is Our Priority</div>
+    
+    <div class="container" id="about">
+        <h2>About Us</h2>
+        <p>At St. William’s Alpha Specialist Medical Centre, we provide optimal healthcare services with compassion, precision, and excellence.</p>
+    </div>
+    
+    <div class="container" id="vision">
+        <h2>Our Vision & Mission</h2>
+        <p><strong>Vision:</strong> To deliver world-class treatment with compassion and precision, ensuring the best possible health outcomes for our patients.</p>
+        <p><strong>Mission:</strong> We are committed to excellence in healthcare, guided by research, education, and compassion, to enhance patient well-being and overall health.</p>
+    </div>
+    
+    <div class="container" id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-box">✅ 24-Hour Emergency Care</div>
+            <div class="service-box">✅ Antenatal & Obstetric Care</div>
+            <div class="service-box">✅ Gynaecology & Family Planning</div>
+            <div class="service-box">✅ Internal Medicine & General Surgery</div>
+            <div class="service-box">✅ Paediatrics & Immunization</div>
+            <div class="service-box">✅ Fertility Screening & Treatment</div>
+            <div class="service-box">✅ Cervical Cancer Screening</div>
+            <div class="service-box">✅ Eye Clinic & Laboratory Services</div>
+            <div class="service-box">✅ IVF</div>
+            <div class="service-box">✅ I.U.I</div>
+            <div class="service-box">✅ Endoscopy</div>
+            <div class="service-box">✅ Ovulation Induction</div>
+            <div class="service-box">✅ Sex Selection</div>
+        </div>
+    </div>
+    
+    <div class="container" id="tour">
+        <h2>Hospital Tour</h2>
+        <p>Take a look inside our state-of-the-art facility, featuring modern medical equipment, comfortable patient rooms, and a welcoming environment.</p>
+        <img src="https://source.unsplash.com/1200x500/?hospital,clinic" alt="Hospital Tour" style="width:100%; border-radius:10px;">
+    </div>
+    
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 Location: Off Rumuosi-Ozuoba Link Road, after Alakahia Market & adjacent to Anglican Church, Rumuosi, Port Harcourt, Rivers State.</p>
+        <p>📞 Contact: 08166383945</p>
+    </div>
+    
+    <footer>
+        &copy; 2025 St. William’s Specialist Hospital. All rights reserved.
+    </footer>
+</body>
+</html>
