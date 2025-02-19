@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>St. William's Specialist Hospital</title>
+  <title>St. William's Specialist Hospital And Fertility Centre</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -17,6 +17,8 @@
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">Our Services</a></li>
         <li><a href="#mission">Our Mission</a></li>
+        <li><a href="#vision">Our Vision</a></li>
+        <li><a href="#tour">Hospital Tour</a></li>
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="#location">Locate Us</a></li>
       </ul>
@@ -24,9 +26,8 @@
   </header>
 
   <section id="about" class="section">
-    <h2>Welcome to St. William's Specialist Hospital</h2>
+    <h2>Welcome to St. William's Specialist Hospital And Fertility Centre</h2>
     <p>We are dedicated to delivering optimal healthcare services with compassion, precision, and excellence.</p>
-    <p>Our Vision: To deliver world-class treatment with compassion and precision, ensuring the best possible health outcomes for our patients.</p>
   </section>
 
   <section id="mission" class="section">
@@ -50,6 +51,26 @@
       <li>Continuous Improvement</li>
     </ul>
   </section>
+
+  <section id="vision" class="section">
+    <h2>Our Vision</h2>
+    <p>To deliver world-class treatment with compassion and precision, ensuring the best possible health outcomes for our patients.</p>
+  </section>
+
+  <section id="tour" class="section">
+    <h2>Hospital Tour</h2>
+    <p>Explore our state-of-the-art facilities designed to provide top-notch healthcare services.</p>
+    <div class="gallery">
+      <img src="images/hospital-tour/reception.jpg" alt="Reception" onclick="openLightbox('images/hospital-tour/reception.jpg')">
+      <img src="images/hospital-tour/ward.jpg" alt="Ward" onclick="openLightbox('images/hospital-tour/ward.jpg')">
+      <img src="hospital/st-williams-hospital/images/Surgery.jpeg" alt="Surgery Room" onclick="openLightbox('hospital/st-williams-hospital/images/Surgery.jpeg')">
+      <img src="images/hospital-tour/pharmacy.jpg" alt="Pharmacy" onclick="openLightbox('images/hospital-tour/pharmacy.jpg')">
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
 
   <section id="services" class="section">
     <h2>Our Services</h2>
@@ -87,15 +108,15 @@
       <li><strong>Phone:</strong> <a href="tel:08166383945">08166383945</a></li>
       <li><strong>Email:</strong> <a href="mailto:stwilliamspecialisthospital@gmail.com">stwilliamspecialisthospital@gmail.com</a></li>
     </ul>
-
-    <!-- Google Maps Embed (Optional) -->
     <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.2381577070775!2d7.015734315303145!3d4.883073246877269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf3b8ffdb5701%3A0x29ad41c59bbf21a9!2sSt.%20William's%20Alpha%20Specialist%20Medical%20Centre!5e0!3m2!1sen!2sng!4v1611798717985!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.923968163213!2d7.028200015318221!3d4.825710296585876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSt.%20William's%20Specialist%20Hospital!5e0!3m2!1sen!2sng!4v1614689131448!5m2!1sen!2sng" 
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 St. William's Specialist Hospital</p>
+    <p>© 2025 St. William's Specialist Hospital And Fertility Centre</p>
   </footer>
 
   <script src="script.js"></script>
