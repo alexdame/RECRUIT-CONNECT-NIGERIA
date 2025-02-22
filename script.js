@@ -2,12 +2,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // Smooth scroll for navigation links
   document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      e.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
-      document.getElementById(targetId).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     });
   });
 
@@ -17,14 +20,21 @@ document.addEventListener('DOMContentLoaded', function () {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animate');
+        observer.unobserve(entry.target); // Ensures animation runs only once
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.4 });
 
   sections.forEach(section => observer.observe(section));
-});
 
-// Toggle mobile menu
-function toggleMenu() {
-  document.getElementById('nav-links').classList.toggle('active');
-}
+  // Mobile menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+      this.classList.toggle('open'); // Optional: Animate the hamburger icon
+    });
+  }
+});

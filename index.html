@@ -5,6 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>St. William's Specialist Hospital And Fertility Centre</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="St. William’s Specialist Hospital offers world-class healthcare services in Port Harcourt, Nigeria.">
+  <meta name="keywords" content="Hospital, Healthcare, Specialist Clinic, Port Harcourt, Medical Center, Surgery, Antenatal, Pediatrics">
+  <meta name="author" content="St. William’s Specialist Hospital">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="St. William’s Specialist Hospital - Quality Healthcare in Port Harcourt">
+  <meta property="og:description" content="Providing expert medical care, fertility treatments, antenatal services, surgery, pediatrics, and more.">
+  <meta property="og:image" content="https://alexdame.github.io/st-williams-hospital/assets/hospital-thumbnail.jpg">
+  <meta property="og:url" content="https://alexdame.github.io/st-williams-hospital/">
+  
+  <!-- Schema Markup for Rich Results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "St. William’s Specialist Hospital",
+    "url": "https://alexdame.github.io/st-williams-hospital/",
+    "logo": "https://alexdame.github.io/st-williams-hospital/assets/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Off Rumuosi-Ozuoba Link Road, after Alakahia Market",
+      "addressLocality": "Port Harcourt",
+      "addressRegion": "Rivers State",
+      "postalCode": "500102",
+      "addressCountry": "NG"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+2348166383945",
+      "contactType": "customer service"
+    }
+  }
+  </script>
+  
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
 </head>
@@ -35,9 +72,9 @@
     <h2>Our Services</h2>
     <ul>
       <li> ✅24 hours Emergency Care</li>
-      <li> ✅Antenatal & Obsetric Care </li>
+      <li> ✅Antenatal & Obstetric Care</li>
       <li> ✅Fertility Screening & Treatment</li>
-      <li> ✅Pediatrics & Immunization </li>
+      <li> ✅Pediatrics & Immunization</li>
       <li> ✅General Surgery & Internal Medicine</li>
       <li> ✅Cervical Cancer Screening</li>
       <li> ✅Eye Clinic & Laboratory Services</li>
@@ -61,19 +98,17 @@
 
   <section id="tour" class="section">
     <h2>Hospital Tour</h2>
-    <p>Explore our state-of-the-art facilities designed to provide top-notch healthcare services featuring our General Surgery, Gynecology, Lab and eye clinic.</p>
+    <p>Explore our state-of-the-art facilities designed to provide top-notch healthcare services featuring our General Surgery, Gynecology, Lab and Eye Clinic.</p>
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          <li class="glide__slide"><img src="images/General surgery.jpeg" alt="General Surgery"></li>
-        
-          <li class="glide__slide"><img src="images/Lab and eye clinic.jpeg" alt="Lab And Eye Clinic"></li>
+          <li class="glide__slide"><img src="images/General_surgery.jpeg" alt="General Surgery"></li>
+          <li class="glide__slide"><img src="images/Lab_and_eye_clinic.jpeg" alt="Lab And Eye Clinic"></li>
         </ul>
       </div>
       <div class="glide__arrows" data-glide-el="controls">
         <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#9665;</button>
         <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#9655;</button>
-        
       </div>
     </div>
   </section>
@@ -103,17 +138,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      new Glide('.glide', {
-        type: 'carousel',
-        startAt: 0,
-        perView: 1,
-        autoplay: 3000,
-        hoverpause: true
-      }).mount();
-    });
-  </script>
   <script src="script.js"></script>
 </body>
 
