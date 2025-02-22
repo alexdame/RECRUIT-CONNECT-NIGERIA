@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>St. William's Specialist Hospital And Fertility Centre</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
 </head>
 
 <body>
   <header>
-    <h1>St. William's Alpha Specialist Medical Centre</h1>
+    <h1>St. William's Alpha Specialist Medical Centre And Fertility Centre</h1>
     <nav>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
       <ul id="nav-links">
@@ -25,93 +26,69 @@
     </nav>
   </header>
 
-  <section id="about" class="section">
-    <h2>Welcome to St. William's Specialist Hospital And Fertility Centre</h2>
-    <p>We are dedicated to delivering optimal healthcare services with compassion, precision, and excellence.</p>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to St. William’s Specialist Hospital And Fertility Centre, where compassionate care meets medical excellence.</p>
   </section>
 
-  <section id="mission" class="section">
-    <h2>Our Mission & Core Values</h2>
-    <p>We are committed to excellence in healthcare, guided by research, education, and compassion to enhance patient well-being.</p>
-    <h3>Core Values:</h3>
+  <section id="services">
+    <h2>Our Services</h2>
     <ul>
-      <li>Patient-Centered Care</li>
-      <li>Excellence</li>
-      <li>Compassion</li>
-      <li>Innovation</li>
-      <li>Collaboration</li>
-      <li>Integrity</li>
-      <li>Respect</li>
-      <li>Accountability</li>
-      <li>Education</li>
-      <li>Safety</li>
-      <li>Accessibility</li>
-      <li>Community Support</li>
-      <li>Sustainability</li>
-      <li>Continuous Improvement</li>
+      <li>Emergency Care</li>
+      <li>Fertility Treatment</li>
+      <li>Antenatal Services</li>
+      <li>General Surgery</li>
+      <li>Pediatrics</li>
+      <li>Cancer Screening</li>
     </ul>
   </section>
 
-  <section id="vision" class="section">
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>To provide world-class healthcare services with precision, compassion, and excellence.</p>
+  </section>
+
+  <section id="vision">
     <h2>Our Vision</h2>
-    <p>To deliver world-class treatment with compassion and precision, ensuring the best possible health outcomes for our patients.</p>
+    <p>To be a leading medical institution, setting new standards in patient-centered care.</p>
   </section>
 
   <section id="tour" class="section">
     <h2>Hospital Tour</h2>
-    <p>Explore our state-of-the-art facilities designed to provide top-notch healthcare services.</p>
-    <div class="gallery">
-      <img src="images/hospital-tour/reception.jpg" alt="Reception" onclick="openLightbox('images/hospital-tour/reception.jpg')">
-      <img src="images/hospital-tour/ward.jpg" alt="Ward" onclick="openLightbox('images/hospital-tour/ward.jpg')">
-      <img src="hospital/st-williams-hospital/images/Surgery.jpeg" alt="Surgery Room" onclick="openLightbox('hospital/st-williams-hospital/images/Surgery.jpeg')">
-      <img src="images/hospital-tour/pharmacy.jpg" alt="Pharmacy" onclick="openLightbox('images/hospital-tour/pharmacy.jpg')">
+    <p>Explore our state-of-the-art facilities designed to provide top-notch healthcare services featuring our General Surgery, Gynecology, Lab and eye clinic.</p>
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide"><img src="images/General surgery.jpeg" alt="General Surgery"></li>
+          <li class="glide__slide"><img src="images/Gynecology.jpeg" alt="Gynecology"></li>
+          <li class="glide__slide"><img src="images/Lab and eye clinic.jpeg" alt="Lab And Eye Clinic"></li>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#9665;</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#9655;</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#9655;</button>
+      </div>
     </div>
   </section>
 
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="">
-  </div>
-
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <ul>
-      <li>✅ 24-Hour Emergency Care</li>
-      <li>✅ Antenatal & Obstetric Care</li>
-      <li>✅ Gynaecology & Family Planning</li>
-      <li>✅ Internal Medicine & General Surgery</li>
-      <li>✅ Paediatrics & Immunization</li>
-      <li>✅ Fertility Screening & Treatment</li>
-      <li>✅ Cervical Cancer Screening</li>
-      <li>✅ Eye Clinic & Laboratory Services</li>
-      <li>✅ IVF</li>
-      <li>✅ I.U.I</li>
-      <li>✅ Endoscopy</li>
-      <li>✅ Ovulation induction</li>
-      <li>✅ Sex Selection</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <p>If you have any inquiries or need assistance, feel free to reach out to us through the following contact details:</p>
     <ul>
-      <li><strong>Phone:</strong> 08166383945</li>
-      <li><strong>Email:</strong> <a href="mailto:stwilliamspecialisthospital@gmail.com">stwilliamspecialisthospital@gmail.com</a></li>
+      <li>📍 Address: Off Rumuosi-Ozuoba Link Road, Port Harcourt</li>
+      <li>📞 Phone: <a href="tel:08166383945">08166383945</a></li>
+      <li>📧 Email: <a href="mailto:info@stwilliamshospital.com">info@stwilliamshospital.com</a></li>
     </ul>
   </section>
-  
+
   <section id="location" class="section">
-    <h2>Our Location</h2>
-    <p>Visit us at our hospital located in Port Harcourt:</p>
-    <ul>
-      <li><strong>Address:</strong> Off Rumuosi-Ozuoba Link Road, after Alakahia Market & adjacent to Anglican Church, Rumuosi, Port Harcourt, Rivers State.</li>
-      <li><strong>Phone:</strong> <a href="tel:08166383945">08166383945</a></li>
-      <li><strong>Email:</strong> <a href="mailto:stwilliamspecialisthospital@gmail.com">stwilliamspecialisthospital@gmail.com</a></li>
-    </ul>
+    <h2>Locate Us</h2>
+    <p>Visit us at our hospital premises. Find us on the map below:</p>
     <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.923968163213!2d7.028200015318221!3d4.825710296585876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSt.%20William's%20Specialist%20Hospital!5e0!3m2!1sen!2sng!4v1614689131448!5m2!1sen!2sng" 
-        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.1506110620984!2d6.968412074980014!3d4.874272295390037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cf23574c5973%3A0x72cf349a9f5bb4d1!2sSt.%20William's%20Specialist%20Hospital!5e0!3m2!1sen!2sng!4v1708456012345"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
@@ -119,6 +96,18 @@
     <p>© 2025 St. William's Specialist Hospital And Fertility Centre</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Glide('.glide', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 1,
+        autoplay: 3000,
+        hoverpause: true
+      }).mount();
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 
