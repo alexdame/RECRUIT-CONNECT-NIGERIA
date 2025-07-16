@@ -1,144 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>St. William's Specialist Hospital And Fertility Centre</title>
-  
-  <!-- SEO Meta Tags -->
-  <meta name="google-site-verification" content="hWhz72mkCbcpyrl9O-jXIaC0sM_ldo8G2bGV99CXZes" />
-  <meta name="description" content="St. William’s Specialist Hospital offers world-class healthcare services in Port Harcourt, Nigeria.">
-  <meta name="keywords" content="Hospital, Healthcare, Specialist Clinic, Port Harcourt, Medical Center, Surgery, Antenatal, Pediatrics">
-  <meta name="author" content="St. William’s Specialist Hospital">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="St. William’s Specialist Hospital - Quality Healthcare in Port Harcourt">
-  <meta property="og:description" content="Providing expert medical care, fertility treatments, antenatal services, surgery, pediatrics, and more.">
-  <meta property="og:image" content="https://alexdame.github.io/st-williams-hospital/assets/hospital-thumbnail.jpg">
-  <meta property="og:url" content="https://alexdame.github.io/st-williams-hospital/">
-  
-  <!-- Schema Markup for Rich Results -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    "name": "St. William’s Specialist Hospital",
-    "url": "https://alexdame.github.io/st-williams-hospital/",
-    "logo": "https://alexdame.github.io/st-williams-hospital/assets/logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Off Rumuosi-Ozuoba Link Road, after Alakahia Market",
-      "addressLocality": "Port Harcourt",
-      "addressRegion": "Rivers State",
-      "postalCode": "500102",
-      "addressCountry": "NG"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+2348166383945",
-      "contactType": "customer service"
-    }
-  }
-  </script>
-  
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter/HR Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-800">
 
-<body>
-  <header>
-    <h1>St. William's Alpha Specialist Medical Centre And Fertility Centre</h1>
-    <nav>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-      <ul id="nav-links">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Our Services</a></li>
-        <li><a href="#mission">Our Mission</a></li>
-        <li><a href="#vision">Our Vision</a></li>
-        <li><a href="#tour">Hospital Tour</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#location">Locate Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-700 rounded-md p-2 hover:bg-indigo-50 transition duration-300">
+                [Your Company Name]
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-indigo-700 font-medium rounded-md p-2 hover:bg-gray-100 transition duration-300">Home</a>
+                <a href="#services" class="text-gray-600 hover:text-indigo-700 font-medium rounded-md p-2 hover:bg-gray-100 transition duration-300">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-700 font-medium rounded-md p-2 hover:bg-gray-100 transition duration-300">About Us</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-indigo-700 font-medium rounded-md p-2 hover:bg-gray-100 transition duration-300">Testimonials</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-700 font-medium rounded-md p-2 hover:bg-gray-100 transition duration-300">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white z-50 p-4">
+            <div class="flex justify-end">
+                <button id="close-mobile-menu" class="text-gray-600 hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4 mt-8">
+                <a href="#home" class="text-gray-800 hover:text-indigo-700 text-lg font-medium rounded-md p-2 hover:bg-gray-100 transition duration-300">Home</a>
+                <a href="#services" class="text-gray-800 hover:text-indigo-700 text-lg font-medium rounded-md p-2 hover:bg-gray-100 transition duration-300">Services</a>
+                <a href="#about" class="text-gray-800 hover:text-indigo-700 text-lg font-medium rounded-md p-2 hover:bg-gray-100 transition duration-300">About Us</a>
+                <a href="#testimonials" class="text-gray-800 hover:text-indigo-700 text-lg font-medium rounded-md p-2 hover:bg-gray-100 transition duration-300">Testimonials</a>
+                <a href="#contact" class="text-gray-800 hover:text-indigo-700 text-lg font-medium rounded-md p-2 hover:bg-gray-100 transition duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Welcome to St. William’s Specialist Hospital And Fertility Centre, where compassionate care meets medical excellence.</p>
-  </section>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 px-4 rounded-b-lg shadow-lg">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 rounded-md p-2">
+                        Connecting Talent with Opportunity
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 opacity-90 rounded-md p-2">
+                        Your trusted partner in talent acquisition and HR solutions. We help businesses thrive by finding the right people and empower careers through strategic guidance.
+                    </p>
+                    <a href="#contact" class="inline-block bg-white text-indigo-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                        Get in Touch
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://placehold.co/600x400/667EEA/FFFFFF?text=Professional+Recruiter" alt="Professional Recruiter" class="rounded-lg shadow-xl max-w-full h-auto">
+                </div>
+            </div>
+        </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li> ✅24 hours Emergency Care</li>
-      <li> ✅Antenatal & Obstetric Care</li>
-      <li> ✅Fertility Screening & Treatment</li>
-      <li> ✅Pediatrics & Immunization</li>
-      <li> ✅General Surgery & Internal Medicine</li>
-      <li> ✅Cervical Cancer Screening</li>
-      <li> ✅Eye Clinic & Laboratory Services</li>
-      <li> ✅I.V.F</li>
-      <li> ✅I.U.I</li>
-      <li> ✅Endoscopy</li>
-      <li> ✅Sex selection</li>
-    </ul>
-  </section>
+        <!-- Services Section -->
+        <section id="services" class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
 
-  <section id="mission">
-    <h2>Our Mission</h2>
-    <p>To provide world-class healthcare services with precision, compassion, and excellence.</p>
-  </section>
+                <!-- Recruitment & Talent Acquisition -->
+                <h3 class="text-2xl font-bold text-indigo-700 mb-6 mt-10">Recruitment & Talent Acquisition</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Service Card 1: Executive Search & Headhunting -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-1.208-8.5-3.035m16.5 3.035V21m0-8.745l-1.414-1.414M10 15H4.092a2.25 2.25 0 01-2.104-1.534L.425 9.558A2.25 2.25 0 012.527 6h17.946c1.026 0 1.945.694 2.104 1.764l1.563 4.204A2.25 2.25 0 0121 13.255z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Executive Search & Headhunting</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Targeted search for top-tier leadership and specialized talent to drive your organization's success.
+                        </p>
+                    </div>
+                    <!-- Service Card 2: Mass Recruitment for SMEs and Corporates -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-2v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2H3m14 0h2a2 2 0 002-2v-2a2 2 0 00-2-2H7a2 2 0 00-2 2v2a2 2 0 002 2h2m0-10a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Mass Recruitment for SMEs and Corporates</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Efficiently manage large-scale recruitment drives for various organizational needs.
+                        </p>
+                    </div>
+                    <!-- Service Card 3: Temporary & Contract Staffing Solutions -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Temporary & Contract Staffing Solutions</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Flexible staffing options to meet your short-term projects or fluctuating workforce demands.
+                        </p>
+                    </div>
+                    <!-- Service Card 4: Outsourced Recruitment Services (RPO) -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Outsourced Recruitment Services (RPO)</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Delegate your entire recruitment process to us, from strategy to execution.
+                        </p>
+                    </div>
+                    <!-- Service Card 5: Internship & Graduate Trainee Placement Programs -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Internship & Graduate Trainee Placement Programs</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Connect with emerging talent through structured internship and graduate programs.
+                        </p>
+                    </div>
+                </div>
 
-  <section id="vision">
-    <h2>Our Vision</h2>
-    <p>To be a leading medical institution, setting new standards in patient-centered care.</p>
-  </section>
+                <!-- HR Consulting & Advisory -->
+                <h3 class="text-2xl font-bold text-indigo-700 mb-6 mt-10">HR Consulting & Advisory</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Service Card 1: HR Department Setup for Startups & SMEs -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m-1 4h1m8-16v12c0 .552-.448 1-1 1H7c-.552 0-1-.448-1-1V5c0-.552.448-1 1-1h10c.552 0 1 .448 1 1z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">HR Department Setup for Startups & SMEs</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Establish robust HR foundations for new and growing businesses.
+                        </p>
+                    </div>
+                    <!-- Service Card 2: HR Policy & Employee Handbook Development -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">HR Policy & Employee Handbook Development</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Create clear, compliant, and effective HR policies and employee handbooks.
+                        </p>
+                    </div>
+                    <!-- Service Card 3: HR Audits & Compliance Checks -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.92 12c0 3.072 1.84 5.772 4.52 7.15A11.955 11.955 0 0112 21.056c3.382 0 6.53-1.107 9.08-3.04a12.001 12.001 0 00-1.382-7.15z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">HR Audits & Compliance Checks</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Ensure your HR practices are compliant with current regulations and best practices.
+                        </p>
+                    </div>
+                    <!-- Service Card 4: Organizational Restructuring & Change Management -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Organizational Restructuring & Change Management</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Guide your organization through effective structural changes and transitions.
+                        </p>
+                    </div>
+                    <!-- Service Card 5: HR Technology Advisory (HRIS/Payroll Systems) -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V5a2 2 0 00-2-2H9a2 2 0 00-2 2v5m3 0h.01M12 12h.01M15 12h.01M12 15h.01M15 15h.01M12 18h.01"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">HR Technology Advisory (HRIS/Payroll Systems)</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Advise on selecting and implementing the right HR technology solutions.
+                        </p>
+                    </div>
+                </div>
 
-  <section id="tour" class="section">
-    <h2>Hospital Tour</h2>
-    <p>Explore our state-of-the-art facilities designed to provide top-notch healthcare services featuring our General Surgery, Lab&Eye Clinic.</p>
-    <div class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li class="glide__slide"><img src="images/General surgery.jpeg" alt="General Surgery"></li>
-          <li class="glide__slide"><img src="images/Lab and eye clinic.jpeg" alt="Lab And Eye Clinic"></li>
-        </ul>
-      </div>
-      <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#9665;</button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#9655;</button>
-      </div>
-    </div>
-  </section>
+                <!-- Training & Development -->
+                <h3 class="text-2xl font-bold text-indigo-700 mb-6 mt-10">Training & Development</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Service Card 1: Soft Skills Training -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Soft Skills Training</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Enhance communication, teamwork, emotional intelligence, and other essential soft skills.
+                        </p>
+                    </div>
+                    <!-- Service Card 2: Leadership & Management Development Programs -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-2v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2H3m14 0h2a2 2 0 002-2v-2a2 2 0 00-2-2H7a2 2 0 00-2 2v2a2 2 0 002 2h2m0-10a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Leadership & Management Development Programs</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Cultivate strong leaders and effective managers within your organization.
+                        </p>
+                    </div>
+                    <!-- Service Card 3: Workplace Etiquette & Customer Service Training -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Workplace Etiquette & Customer Service Training</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Improve professional conduct and customer interaction skills for your team.
+                        </p>
+                    </div>
+                    <!-- Service Card 4: Employee Onboarding & Induction Programs -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Employee Onboarding & Induction Programs</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Facilitate smooth integration of new hires into your company culture and roles.
+                        </p>
+                    </div>
+                    <!-- Service Card 5: Train-the-Trainer Programs -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Train-the-Trainer Programs</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Equip your internal staff to deliver effective training within your organization.
+                        </p>
+                    </div>
+                </div>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <ul>
-      <li>📍 Address: Off Rumuosi-Ozuoba Link Road, Port Harcourt</li>
-      <li>📞 Phone: <a href="tel:08166383945">08166383945</a></li>
-      <li>📧 Email: <a href="mailto:stwilliamspecialisthospital@gmail.com">stwilliamspecialisthospital@gmail.com</a></li>
-    </ul>
-  </section>
+                <!-- Performance & People Management -->
+                <h3 class="text-2xl font-bold text-indigo-700 mb-6 mt-10">Performance & People Management</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Service Card 1: Performance Management System Setup & Reviews -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v14c0 1.105-1.12 2-2.5 2H9zM19 19H4.5a2.25 2.25 0 01-2.25-2.25V4.5A2.25 2.25 0 014.5 2.25h10.5a2.25 2.25 0 012.25 2.25v12.5A2.25 2.25 0 0117 19z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Performance Management System Setup & Reviews</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Design and implement effective systems for tracking and improving employee performance.
+                        </p>
+                    </div>
+                    <!-- Service Card 2: KPI Design & Implementation -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">KPI Design & Implementation</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Develop and integrate Key Performance Indicators to measure success effectively.
+                        </p>
+                    </div>
+                    <!-- Service Card 3: Employee Engagement & Satisfaction Surveys -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Employee Engagement & Satisfaction Surveys</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Gauge and improve employee morale and satisfaction within your workplace.
+                        </p>
+                    </div>
+                    <!-- Service Card 4: Career Pathing & Succession Planning -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Career Pathing & Succession Planning</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Develop clear career progression and ensure future leadership continuity.
+                        </p>
+                    </div>
+                    <!-- Service Card 5: Conflict Resolution & Disciplinary Advisory -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Conflict Resolution & Disciplinary Advisory</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Provide expert guidance on resolving workplace conflicts and disciplinary matters.
+                        </p>
+                    </div>
+                </div>
 
-  <section id="location" class="section">
-    <h2>Locate Us</h2>
-    <p>Visit us at our hospital premises. Find us on the map below:</p>
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.1506110620984!2d6.968412074980014!3d4.874272295390037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cf23574c5973%3A0x72cf349a9f5bb4d1!2sSt.%20William's%20Specialist%20Hospital!5e0!3m2!1sen!2sng!4v1708456012345"
-        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
+                <!-- Payroll & Outsourcing Services -->
+                <h3 class="text-2xl font-bold text-indigo-700 mb-6 mt-10">Payroll & Outsourcing Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Service Card 1: Payroll Processing & Compliance -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 8h6m-5 0h.01M9 12h6m-5 0h.01M9 16h6m-5 0h.01M3 6h18a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Payroll Processing & Compliance</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Ensure accurate and compliant payroll processing, including taxes and deductions.
+                        </p>
+                    </div>
+                    <!-- Service Card 2: Employee Benefits Administration -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM9 12H7a4 4 0 00-4 4v2H1v-2a6 6 0 016-6h2v-2zm6 0h2a4 4 0 014 4v2h2v-2a6 6 0 00-6-6h-2v-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Employee Benefits Administration</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Manage and administer employee benefits programs efficiently.
+                        </p>
+                    </div>
+                    <!-- Service Card 3: Full HR Outsourcing -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Full HR Outsourcing</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Take over your entire HR function, allowing you to focus on your core business.
+                        </p>
+                    </div>
+                    <!-- Service Card 4: Staff Verification & Background Checks -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Staff Verification & Background Checks</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Thorough verification and background checks for reliable hiring.
+                        </p>
+                    </div>
+                </div>
 
-  <footer>
-    <p>© 2025 St. William's Specialist Hospital And Fertility Centre</p>
-  </footer>
+                <!-- Business Support Services -->
+                <h3 class="text-2xl font-bold text-indigo-700 mb-6 mt-10">Business Support Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Service Card 1: Job Description Development & Review -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Job Description Development & Review</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Craft clear and comprehensive job descriptions to attract the right candidates.
+                        </p>
+                    </div>
+                    <!-- Service Card 2: Organizational Structure & Chart Design -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Organizational Structure & Chart Design</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Design optimal organizational structures for efficiency and clarity.
+                        </p>
+                    </div>
+                    <!-- Service Card 3: HR Data Analytics & Reporting -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">HR Data Analytics & Reporting</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Leverage data to gain insights into HR performance and make informed decisions.
+                        </p>
+                    </div>
+                    <!-- Service Card 4: Virtual HR Services for Remote Companies -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Virtual HR Services for Remote Companies</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Comprehensive HR support tailored for remote and distributed teams.
+                        </p>
+                    </div>
+                    <!-- Service Card 5: Support with Labour Law Compliance & Dispute Resolution -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.92 12c0 3.072 1.84 5.772 4.52 7.15A11.955 11.955 0 0112 21.056c3.382 0 6.53-1.107 9.08-3.04a12.001 12.001 0 00-1.382-7.15z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">Support with Labour Law Compliance & Dispute Resolution</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Expert assistance in navigating labor laws and resolving workplace disputes.
+                        </p>
+                    </div>
+                </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-  <script src="script.js"></script>
+                <!-- Recruitconnect Signature Services -->
+                <h3 class="text-2xl font-bold text-indigo-700 mb-6 mt-10">Recruitconnect Signature Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1: “RecruitReady” – CV & Interview Preparation Coaching for Job Seekers -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">“RecruitReady” – CV & Interview Preparation Coaching for Job Seekers</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Empower job seekers with expert coaching for standout CVs and confident interviews.
+                        </p>
+                    </div>
+                    <!-- Service Card 2: “ConnectPro” – Business HR subscription packages for small businesses -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM9 12H7a4 4 0 00-4 4v2H1v-2a6 6 0 016-6h2v-2zm6 0h2a4 4 0 014 4v2h2v-2a6 6 0 00-6-6h-2v-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">“ConnectPro” – Business HR subscription packages for small businesses</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Flexible and affordable HR support through tailored subscription plans for small businesses.
+                        </p>
+                    </div>
+                    <!-- Service Card 3: “HireFast” – 48-hour recruitment turnaround for urgent roles -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-indigo-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 text-center md:text-left">“HireFast” – 48-hour recruitment turnaround for urgent roles</h3>
+                        <p class="text-gray-600 text-center md:text-left">
+                            Rapid recruitment solutions for critical and time-sensitive hiring needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 px-4 bg-white">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://placehold.co/600x400/93C5FD/FFFFFF?text=About+Us" alt="About Us" class="rounded-lg shadow-xl max-w-full h-auto">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">About Us</h2>
+                    <p class="text-lg text-gray-600 mb-4">
+                        We are a dedicated team of HR and recruitment specialists committed to empowering businesses and individuals. With years of experience, we understand the complexities of the modern workforce and offer tailored solutions to meet unique challenges.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        Our mission is to build strong, sustainable workforces by connecting exceptional talent with leading organizations, fostering growth and success for all.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="bg-indigo-50 py-16 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">What Our Clients Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <p class="text-gray-700 italic mb-4">
+                            "Their executive search service found us a phenomenal CEO who has transformed our company. Truly impressed with their professionalism and results!"
+                        </p>
+                        <p class="font-semibold text-indigo-700">- Jane Doe, CEO of TechCorp</p>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <p class="text-gray-700 italic mb-4">
+                            "The HR policy development was seamless and incredibly thorough. Our employee handbook is now a clear and valuable resource."
+                        </p>
+                        <p class="font-semibold text-indigo-700">- John Smith, Founder of StartupX</p>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <p class="text-gray-700 italic mb-4">
+                            "We needed to staff up quickly for a new project, and their temporary staffing solutions were exactly what we needed. Highly recommend!"
+                        </p>
+                        <p class="font-semibold text-indigo-700">- Emily White, Project Manager at Global Innovations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 px-4 bg-gray-100">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Get in Touch</h2>
+                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                    <form>
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Your Name">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="your@example.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Subject of your inquiry">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="6" class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Your message..."></textarea>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4 mt-12">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">&copy; 2024 [Your Company Name]. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMobileMenu = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.remove('hidden');
+            });
+
+            closeMobileMenu.addEventListener('click', function () {
+                mobileMenu.classList.add('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>
